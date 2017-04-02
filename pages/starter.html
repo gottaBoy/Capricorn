@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>货运中国网</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../vendor/icheck/skins/all.css">
+  <!-- datatable -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.bootstrap.min.css" />
+ <!--  select2 -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.8/select2-bootstrap.css" />
+   <!-- animate -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+
+  <!-- Theme style -->
+  <!-- <link rel="stylesheet" href="../build/css/adminLTE.css"> -->
+  <link rel="stylesheet" href="../dist/css/adminLTE.css"> 
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect.
+  -->
+  <link rel="stylesheet" href="../build/css/skins/skin-blue.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="../vendor/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/slimScroll/jquery.slimscroll.min.js"></script>
+  <!-- Bootstrap 3.3.6 -->
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../vendor/slimScroll/jquery.slimscroll.js"></script>
+  <!-- iCheck 1.0.1 -->
+  <script src="../vendor/icheck/icheck.min.js"></script>
+  <script src="../vendor/holderjs/holder.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50/jquery.form.js"></script>
+  <!-- select2 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/i18n/zh-CN.js"></script>
+  <!-- datatable -->
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.1.0/js/responsive.bootstrap.min.js"></script>
+
+  <!-- Bootstrap WYSIHTML5 -->
+  <script src="../vendor/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+  <script src="../../js/datatable-user.js"></script>
+ 
+
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-blue sidebar-mini  ajax-template" >
+<div class="wrapper">
+ 
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>C</b>N</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Cargo</b>cn</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">您有 4 条信息</li>
+              <li>
+                <!-- inner menu: contains the messages -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <!-- User Image -->
+                        <img src="../build/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <!-- Message title and timestamp -->
+                      <h4>
+                        支持团队
+                        <small><i class="fa fa-clock-o"></i> 5 分钟</small>
+                      </h4>
+                      <!-- The message -->
+                      <p>为什么不购买新的 awesome 主题?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                </ul>
+                <!-- /.menu -->
+              </li>
+              <li class="footer"><a href="#">查看所有信息</a></li>
+            </ul>
+          </li>
+          <!-- /.messages-menu -->
+
+          <!-- Notifications Menu -->
+          <li class="dropdown notifications-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">您有 10 条公告</li>
+              <li>
+                <!-- Inner Menu: contains the notifications -->
+                <ul class="menu">
+                  <li><!-- start notification -->
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i>今天新增 5  位用户
+                    </a>
+                  </li>
+                  <!-- end notification -->
+                </ul>
+              </li>
+              <li class="footer"><a href="#">查看所有公告</a></li>
+            </ul>
+          </li>
+          <!-- Tasks Menu -->
+          <li class="dropdown tasks-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">您有9项任务</li>
+              <li>
+                <!-- Inner menu: contains the tasks -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <!-- Task title and progress text -->
+                      <h3>
+                        设计按钮
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <!-- The progress bar -->
+                      <div class="progress xs">
+                        <!-- Change the css width attribute to simulate progress -->
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% 完成</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">查看所有任务</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="../build/img/avatar.png" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">gottaBoy</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="../build/img/avatar.png" class="img-circle" alt="User Image">
+
+                <p>
+                  gottaBoy - 前端开发
+                  <small>加入时间2016</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">个人信息</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">登出</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../build/img/avatar.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>gottaBoy</p>
+          <!-- Status -->
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+        <li class="header"><span>货运中国网</span></li>
+        <!-- Optionally, you can add icons to the links -->
+        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>主页</span></a></li>
+       <li><a target="navTab" href="../include/cg/users/list.html"><i class="fa fa-circle-o"></i> <span>用户管理</span></a></li>
+       <li><a target="navTab" href="../include/cg/roles/list.html"><i class="fa fa-circle-o"></i> <span>角色管理</span></a></li>
+       <li><a target="navTab" href="../include/cg/resources/list.html"><i class="fa fa-circle-o"></i> <span>资源管理</span></a></li>
+       <li><a target="navTab" href="../include/cg/applications/list.html"><i class="fa fa-circle-o"></i> <span>应用管理</span></a></li>
+       <li><a target="navTab" href="../include/cg/logs/list.html"><i class="fa fa-circle-o"></i> <span>日志管理</span></a></li>
+       <li><a target="navTab" href="../include/cg/implements/list.html"><i class="fa fa-circle-o"></i> <span>接口管理</span></a></li>
+       <li><a target="navTab" href="../include/cg/implbusiness/list.html"><i class="fa fa-circle-o"></i> <span>接口业务管理</span></a></li>
+       <li><a target="navTab" href="../include/cg/messagetemplates/list.html"><i class="fa fa-circle-o"></i> <span>模板管理</span></a></li>
+       <li><a target="navTab" href="../include/cg/messagesend/list.html"><i class="fa fa-circle-o"></i> <span>消息发送</span></a></li>
+       <li><a target="navTab" href="../include/cg/messagerecipients/list.html"><i class="fa fa-circle-o"></i> <span>接收人管理</span></a></li>
+        <li><a target="navTab" href="../include/cg/cars/list.html"><i class="fa fa-circle-o"></i> <span>车辆管理</span></a></li>
+        <li><a target="navTab" href="../include/cg/ships/list.html"><i class="fa fa-circle-o"></i> <span>船舶管理</span></a></li>
+        <li><a target="navTab" href="../include/cg/drivers/list.html"><i class="fa fa-circle-o"></i><span> 司机管理</span></a></li>
+        <li><a target="navTab" href="../include/cg/companys/list.html"><i class="fa fa-circle-o"></i><span> 企业管理</span></a></li>
+        <li><a target="navTab" href="../include/cg/employees/list.html"><i class="fa fa-circle-o"></i><span> 员工管理</span></a></li>
+        <li><a target="navTab" href="../include/cg/orders/list.html"><i class="fa fa-circle-o"></i> <span>订单管理</span></a></li>
+        <li><a target="navTab" href="../include/cg/routines/list.html"><i class="fa fa-circle-o"></i><span> 路线管理</span></a></li>
+        <li><a target="navTab" href="../include/cg/bills/list.html"><i class="fa fa-circle-o"></i><span> 运单管理</a></li>
+        <li><a target="navTab" href="../include/cg/demos/list.html"><i class="fa fa-circle-o"></i><span> demo</a></li>
+         <li><a target="navTab" href="../include/cg/forms/list.html"><i class="fa fa-circle-o"></i> <span>表单</span></a></li>
+         <li class=" treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>面板</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../dashboard.html"><i class="fa fa-circle-o"></i> 面板 v1</a></li>
+            <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> 面板 v2</a></li>
+          </ul>
+        </li>
+       <!--  <li class="treeview">
+         <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+           <span class="pull-right-container">
+             <i class="fa fa-angle-left pull-right"></i>
+           </span>
+         </a>
+         <ul class="treeview-menu">
+           <li><a href="#">Link in level 2</a></li>
+           <li><a href="#">Link in level 2</a></li>
+         </ul>
+       </li> -->
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+   <!--  <section class="content-header">
+     <h1>
+       主页
+       <small>页面详情</small>
+     </h1>
+     <ol class="breadcrumb">
+       <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+       <li class="active">Here</li>
+     </ol>
+   </section> -->
+   <section class="content-header-navtabs">
+        <div class="tabs-page">
+          <ul class="tabs-list clearfix" id="navTabs">
+             <li class="active"><span>我的主页</span></li>
+           </ul>
+           <a href="javascript:void(0);" class="prev fa fa-step-backward"></a>
+           <a href="javascript:void(0);" class="next fa fa-step-forward"></a> 
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content" id="content">
+      <!-- Your Page Content Here -->
+      <div class="tabs-panel">
+        <h1>欢迎使用货运中国网物流平台</h1>
+        <div class="callout callout-warning">
+             <h4>温馨提示!</h4>
+             <span>&nbsp;&nbsp;&nbsp;&nbsp;关于货运中国网的任何问题，请发送邮件到  Service@Cargocn.com  联络我们。</span>
+             <span>&nbsp;&nbsp;&nbsp;&nbsp;地址：上海市杨浦区政益路48号706室 </span>
+             <span>
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;货运中国网是一个开放的公路货运整合服务云平台，面向发货人、承运人、卡车司机、收货人等物流运输参与各方，提供物流伙伴圈关系构建、物流交易、物流执行、物流金融、信息和数据服务等一系列物流增值服务，构建以货主企业为龙头的在线物流交易和物流执行生态圈，旨在提高物流全程的信息透明度、交易效率和协同水平，进而降低各方物流成本、提升各方收益。
+                <br/><br/><B>我们的目标用户：</B><br/>
+                <br/>※  运输密集型行业的发货人/收货人企业，如：
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  石油、煤炭、钢铁、水泥、有色、矿业、建材、农产品等大宗物资制造和贸易企业；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  汽车/零部件、机械、装备、电气/机电设备、化工等工业产品制造和贸易企业；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  家居、电器、食品饮料、纺织服装以及其他耐用/快速消费品制造和贸易企业；
+                <br/>※  各种类型的物流运输企业，如：
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  大型第三方物流公司
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  中小型第三方物流公司
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  各种专业运输公司
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  公路货运专线公司
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  公路货运代理公司
+                <br/>※  承运卡车司机
+                <br/><br/><B>我们提供的服务和平台主要应用功能：</B><br/>
+                <br/>※  发货企业/收货企业：
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  构建在线物流运输合作伙伴圈
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  发起在线招标/竞价等物流交易活动
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  运输订单在线管理、派发
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  运输过程全程可视化跟踪和异常监控处理
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  发货人与承运人、司机、收货人即时协同
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  运费在线支付、对账
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  管理与考核承运物流商KPI
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  与企业内部信息化系统(ERP/WMS/TMS等)集成
+                <br/><br/>※  物流运输企业：
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  构建在线物流运输合作伙伴圈
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  管理自有/合作卡车、司机、车队
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  参加货主发起的在线招标/竞价等物流交易活动
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  向合作承运商询价/报价、向合作个体司机询价
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  运输订单的在线管理、调度派车、分包管理
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  运输过程全程可视化跟踪和异常监控处理
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  与发货人、司机、收货人即时协同
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  运费在线收支、对账
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  运费发票管理
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  应收运费保理融资
+                <br/><br/>※  承运卡车司机(通过手机APP软件)：
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  简单、易用的个人运输业务和收支管理工具
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  对合作物流公司的运输询价订单进行报价
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  查看合作物流公司派发给自己的运单、执行运输任务、反馈作业状态、上载电子回单
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  记录、查看运费收款情况和个人支出信息
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  查看个人运输行驶轨迹 
+                <br/><br/><B>我们为用户带来的价值：</B><br/>
+                <br/>※  发货企业/收货企业：
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  把承运物流商、司机和收货客户纳入发货企业的在线物流生态圈中，并实现全程可视化管理，有效地拓展外部信息系统覆盖面，提升物流管理效率和客户服务水平；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  在线招标/竞价，确保运力供应商提供稳定运输服务的前提下，不断优化供应商组合和运输成本；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  货物安全和运输安全得到加强；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  运费在线支付，便捷、快速、安全；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  对货、对账等事务性工作的效率和准确性大幅度提高； 
+                <br/><br/>※  物流运输企业：
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  低门槛、低成本快速实现物流公司基础信息化管理：包括对卡车、司机、车队、发货人、收货人、订单、运单、分包、支付、收款、对账等方面的在线管理；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  强化与现有货主的长期合作关系，有更多机会获得新货主的物流运输业务；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  强化物流同行间的协作和协同，共享平台上更多卡车资源，迅速扩大运力；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  安全及时方便的运费在线收付、对账；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  一站式在线投保和应收运费保理融资服务，提高承运人风控水平和业务承接能力；
+                <br/><br/>※  承运卡车司机(通过手机APP软件)：
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  免费和便利的个人信息化管理工具，无需复杂的学习，操作简单便捷；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  与物流公司的生意合作更加高效、稳定；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  及时收到运费，安全有保障；
+                <br/>&nbsp;&nbsp;&nbsp;&nbsp;√  货主满意度提高，带来好的口碑和更多生意机会； 
+             </span>
+           </div>
+      </div>
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+ <!--  <div class="right-box"> 
+       
+ </div>  -->
+  
+   <!-- Control Sidebar Panel -->
+   <div  id="cs-panel" class="cs-panel control-sidebar1 cs-panel-white" style="display: none;">
+     <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </div>
+  <!-- /.control-sidebar Panel-->
+
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.2.3 -->
+<!-- <script src="plugins/jQuery/jquery-2.2.3.min.js"></script> -->
+ <!-- AdminLTE App -->
+<script src="../build/js/app.min.js"></script>
+<script type="text/javascript">
+  // $('body').slimScroll({
+  //         color: '#00f'
+  // });
+</script>
+</body>
+</html>

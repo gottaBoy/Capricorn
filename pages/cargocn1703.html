@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html> 
+<head>  
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>货运中国网</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <link rel="stylesheet" href="../vendor/jquery.treetable/jquery.treetable.css"> 
+  <link rel="stylesheet" href="../vendor/jquery.treetable/jquery.treetable.theme.default.css">
+  <!-- Bootstrap 3.3.6 -->
+  <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+   <!-- daterange picker -->
+  <link rel="stylesheet" href="../vendor/daterangepicker/daterangepicker.css">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="../vendor/datepicker/datepicker3.css">
+  <!-- iCheck for checkboxes and radio inputs -->
+  <link rel="stylesheet" href="../vendor/icheck/skins/all.css">
+  <!-- datatable -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.bootstrap.min.css" />
+ <!--  select2 -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2-bootstrap-theme/0.1.0-beta.8/select2-bootstrap.css" />
+
+ <!-- Bootstrap time Picker -->
+ <link rel="stylesheet" href="../vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css">
+ <!-- animate -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+ <!--  zTree_v3 -->
+ <link rel="stylesheet" href="../vendor/zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+ <!-- Theme style -->
+ <!-- <link rel="stylesheet" href="../dist/css/adminLTE.css"> -->
+ <link rel="stylesheet" href="../build/css/adminLTE.css">
+ <link rel="stylesheet" href="../dist/css/alibaba.css">
+  <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
+        page. However, you can choose any other skin. Make sure you
+        apply the skin class to the body tag so the changes take effect.
+  -->
+  <link rel="stylesheet" href="../build/css/skins/skin-blue.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="../vendor/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <script src="../vendor/jquery/jquery.min.js"></script>
+  <script src="../vendor/slimScroll/jquery.slimscroll.min.js"></script>
+  <script src="../vendor/jquery.treetable/jquery.treetable.js"></script>
+  
+  <!-- Bootstrap 3.3.6 -->
+  <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!-- zTree_v3 -->
+  <script type="text/javascript" src="../vendor/zTree_v3/js/jquery.ztree.core.js"></script>
+  <script type="text/javascript" src="../vendor/zTree_v3/js/jquery.ztree.excheck.js"></script>
+ <!--  <script type="text/javascript" src="../vendor/slimScroll/jquery.slimscroll.js"></script> -->
+  <!-- iCheck 1.0.1 -->
+  <script src="../vendor/icheck/icheck.min.js"></script>
+  <script src="../vendor/holderjs/holder.js"></script>
+  <script src="../vendor/autosize/autosize.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.50/jquery.form.js"></script>
+  <!-- select2 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/select2.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/js/i18n/zh-CN.js"></script>
+  <!-- bootstrap time picker -->
+  <script src="../vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+  <script src="../vendor/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+
+  <!-- date-range-picker -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+  <script src="../vendor/daterangepicker/daterangepicker.js"></script>
+  <!-- bootstrap datepicker -->
+  <script src="../vendor/datepicker/bootstrap-datepicker.js"></script>
+  <!-- datatable -->
+  <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+  <script src="https://cdn.datatables.net/responsive/2.1.0/js/responsive.bootstrap.min.js"></script>
+
+  <!-- Bootstrap WYSIHTML5 -->
+  <script src="../vendor/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+  <script src="../../js/datatable-user.js"></script>
+  <script>
+/*function iFrameHeight() { 
+var ifm= document.getElementById("content"); 
+var subWeb = document.frames ? document.frames["content"].document : ifm.contentDocument; 
+if(ifm != null && subWeb != null) { 
+ifm.height = subWeb.body.scrollHeight; 
+} 
+} */
+</script>
+<style type="text/css">
+#content > .tabs-panel {
+    position: relative;
+}
+.table-action{
+    margin-left: 6px;
+    margin-right: 6px;
+}
+#dynamicColumns {
+  box-shadow:0 0 6px rgba(0,0,0,0.3);
+}
+table.treetable {
+   border: 1px solid #c8c8c8;
+}
+table.treetable > caption  a {
+   display: inline-block;
+   padding: 2px;
+   border: 1px solid #c8c8c8;
+   margin-left: 10px;
+   margin-right: 10px;
+}
+table.treetable th,table.treetable tr,table.treetable td {
+    height: 34px;
+}
+table.treetable thead {
+   background: #fff;
+}
+table.treetable thead tr th {
+    border: 1px solid #c8c8c8;
+} 
+
+/* right-box */
+ .tool-hide{
+      display: none;
+  }
+ .tool-show{
+     /* display: inline-block; */
+ } 
+ .form-info{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+ }
+ .form-view{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+ }
+ .fixed.ajax-template .content {
+    /* margin-top: 40px; */
+    margin-top: 0;
+}
+.fixed.ajax-template .right-box .box-body {
+    height: 400px;
+    overflow-y: auto;
+    overflow-x:hidden;
+}
+.fixed.ajax-template .right-box .box-body .showSlimScroll{
+    
+}
+/* .table>tbody>tr.selected,.table>tbody>tr:hover{
+  background-color: gray;
+} */
+.table-hover>tbody>tr:hover,.table-hover>tbody>tr.selected{
+  background-color: #b5b5b5;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+/* .mask {
+  width:100%;
+  height:100%;
+  background-color:#000;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:2;
+  opacity:0.5;
+  filter: alpha(opacity=50);
+} */
+</style>
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to get the
+desired effect
+|---------------------------------------------------------|
+| SKINS         | skin-blue                               |
+|               | skin-black                              |
+|               | skin-purple                             |
+|               | skin-yellow                             |
+|               | skin-red                                |
+|               | skin-green                              |
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | fixed                                   |
+|               | layout-boxed                            |
+|               | layout-top-nav                          |
+|               | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition skin-blue sidebar-mini  sidebar-collapse ajax-template fixed" >
+<div class="wrapper">
+ 
+  <!-- Main Header -->
+  <header class="main-header">
+
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>C</b>N</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Cargo</b>cn</span>
+    </a>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+      <!-- Navbar Right Menu -->
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">您有 4 条信息</li>
+              <li>
+                <!-- inner menu: contains the messages -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <!-- User Image -->
+                        <img src="../build/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <!-- Message title and timestamp -->
+                      <h4>
+                        支持团队
+                        <small><i class="fa fa-clock-o"></i> 5 分钟</small>
+                      </h4>
+                      <!-- The message -->
+                      <p>为什么不购买新的 awesome 主题?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                </ul>
+                <!-- /.menu -->
+              </li>
+              <li class="footer"><a href="#">查看所有信息</a></li>
+            </ul>
+          </li>
+          <!-- /.messages-menu -->
+
+          <!-- Notifications Menu -->
+          <li class="dropdown notifications-menu">
+            <!-- Menu toggle button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">您有 10 条公告</li>
+              <li>
+                <!-- Inner Menu: contains the notifications -->
+                <ul class="menu">
+                  <li><!-- start notification -->
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i>今天新增 5  位用户
+                    </a>
+                  </li>
+                  <!-- end notification -->
+                </ul>
+              </li>
+              <li class="footer"><a href="#">查看所有公告</a></li>
+            </ul>
+          </li>
+          <!-- Tasks Menu -->
+          <li class="dropdown tasks-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">您有9项任务</li>
+              <li>
+                <!-- Inner menu: contains the tasks -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <!-- Task title and progress text -->
+                      <h3>
+                        设计按钮
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <!-- The progress bar -->
+                      <div class="progress xs">
+                        <!-- Change the css width attribute to simulate progress -->
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% 完成</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">查看所有任务</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account Menu -->
+          <li class="dropdown user user-menu">
+            <!-- Menu Toggle Button -->
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <!-- The user image in the navbar-->
+              <img src="../build/img/avatar.png" class="user-image" alt="User Image">
+              <!-- hidden-xs hides the username on small devices so only the image appears. -->
+              <span class="hidden-xs">gottaBoy</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- The user image in the menu -->
+              <li class="user-header">
+                <img src="../build/img/avatar.png" class="img-circle" alt="User Image">
+
+                <p>
+                  gottaBoy - 前端开发
+                  <small>加入时间2016</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">个人信息</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">登出</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <div class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar user panel (optional) -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="../build/img/avatar.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>gottaBoy</p>
+          <!-- Status -->
+          <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+        </div>
+      </div>
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu">
+      <li class="header"><span>货运中国网</span></li>
+        <!-- Optionally, you can add icons to the links -->
+      <li class="treeview">
+       <a href="javascript:void(0);"><i class="fa fa-ship"></i> <span>货运中国2017</span>
+         <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+       </a>
+       <ul class="treeview-menu">
+        <li><a target="navTab" href="../include/cargocn1703/project/list.html"><i class="fa fa-search"></i> <span>项目管理</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/team/list.html"><i class="fa fa-search"></i> <span>项目团队</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/routine/list.html"><i class="fa fa-search"></i> <span>项目线路</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/driverConfirm/list.html"><i class="fa fa-search"></i> <span>司机审核</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/waybilltrack/list.html"><i class="fa fa-search"></i> <span>运单跟踪</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/receiptConfirm/list.html"><i class="fa fa-search"></i> <span>回单</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/settlementConfirm/list.html"><i class="fa fa-search"></i> <span>结算单</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/payApply/list.html"><i class="fa fa-search"></i> <span>支付申请</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/payConfirm/list.html"><i class="fa fa-search"></i> <span>支付确认</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/withdrawApply/list.html"><i class="fa fa-search"></i> <span>司机提现申请</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/withdrawConfirm/list.html"><i class="fa fa-search"></i> <span>司机提现复核</span></a></li>
+        <li><a target="navTab" href="../include/cargocn1703/money/list.html"><i class="fa fa-search"></i> <span>客户</span></a></li>
+       </ul>
+     </li>
+      <li class="active"><a target="navTab" href="../include/hhg/receipt/list.html"><i class="fa fa-link"></i> <span>开票登记</span></a></li>
+      <li class="treeview">
+         <a href="javascript:void(0);"><i class="fa fa-ship"></i> <span>黄骅港项目</span>
+           <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+         </a>
+         <ul class="treeview-menu">
+           <li><a target="navTab" href="../include/hhg/search/list.html"><i class="fa fa-search"></i> <span>预约到岗查询</span></a></li>
+           <li><a target="navTab" href="../include/hhg/dynamicInfo/list.html"><i class="fa fa-info"></i> <span>船舶动态信息</span></a></li>
+           <li><a target="navTab" href="../include/hhg/store/list.html"><i class="fa fa-database"></i> <span>货类场存情况</span></a></li>
+           <li><a target="navTab" href="../include/hhg/example/index3.html"><i class="fa fa-link"></i> <span>主页</span></a></li>
+           <li><a target="navTab" href="../include/hhg/example/login.html"><i class="fa fa-link"></i> <span>登录框</span></a></li>
+         </ul>
+       </li>
+       <li class="treeview">
+         <a href="javascript:void(0);"><i class="fa fa-link"></i> <span>超级管理员</span>
+           <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+         </a>
+         <ul class="treeview-menu">
+                <li><a target="navTab" href="../include/cg/applications/list.html"><i class="fa fa-check-circle-o"></i> <span>应用管理</span></a></li>
+               <li><a target="navTab" href="../include/cg/resources/list.html"><i class="fa fa-cloud"></i> <span>资源管理</span></a></li>
+               <li><a target="navTab" href="../include/cg/roles/list.html"><i class="fa fa-paw"></i> <span>角色管理</span></a></li>
+               <li><a target="navTab" href="../include/cg/companys/list.html"><i class="fa fa-building-o"></i> <span>企业管理</span></a></li>
+               <li><a target="navTab" href="../include/cg/users/list.html"><i class="fa fa-user"></i> <span>用户管理</span></a></li>
+               <li><a target="navTab" href="../include/cg/organizations/list.html"><i class="fa fa-sitemap"></i> <span>组织管理</span></a></li>
+                <li><a target="navTab" href="../include/cg/logs/list.html"><i class="fa fa-clock-o"></i> <span>日志管理</span></a></li>
+               <li><a target="navTab" href="../include/cg/logs/operatelist.html"><i class="fa fa-clock-o"></i> <span>操作日志</span></a></li>
+               <li><a target="navTab" href="../include/cg/logs/errorlist.html"><i class="fa fa-clock-o"></i> <span>错误日志</span></a></li>
+               <li><a target="navTab" href="../include/cg/implements/list.html"><i class="fa fa-empire"></i> <span>接口管理</span></a></li>
+               <li><a target="navTab" href="../include/cg/implbusiness/list.html"><i class="fa fa-empire"></i> <span>接口业务管理</span></a></li>
+               <li><a target="navTab" href="../include/cg/messagetemplates/list.html"><i class="fa fa-circle-o"></i> <span>模板管理</span></a></li>
+               <li><a target="navTab" href="../include/cg/messagesend/list.html"><i class="fa fa-envelope-o"></i> <span>消息发送</span></a></li>
+               <li><a target="navTab" href="../include/cg/messagerecipients/list.html"><i class="fa fa-circle-o"></i> <span>接收人管理</span></a></li>
+         </ul>
+      </li>
+       <li class="treeview">
+         <a href="javascript:void(0);"><i class="fa fa-link"></i> <span>企业管理员</span>
+           <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+         </a>
+         <ul class="treeview-menu">
+                 <li><a target="navTab" href="../include/cg/organizations/list.html"><i class="fa fa-sitemap"></i> <span>组织管理</span></a></li>
+                 <li><a target="navTab" href="../include/cg/roles/list.html"><i class="fa fa-paw"></i> <span>角色管理</span></a></li>
+                 <li><a target="navTab" href="../include/cg/users/list.html"><i class="fa fa-user"></i> <span>用户管理</span></a></li>
+         </ul>
+       </li>
+       <li><a target="navTab" href="../include/cg/examples/roletree.html"><i class="fa fa-building-o"></i> <span>roletree</span></a></li>
+       <li><a target="navTab" href="../include/cg/menus/list.html"><i class="fa fa-building-o"></i> <span>菜单管理</span></a></li>
+       <li class="treeview">
+         <a href="javascript:void(0);"><i class="fa fa-link"></i> <span>企业物理管理</span>
+           <span class="pull-right-container"><i class="fa fa-angle-left pull-right"></i></span>
+         </a>
+         <ul class="treeview-menu">
+            <li><a target="navTab" href="../include/cg/cars/list.html"><i class="fa fa-circle-o"></i> <span>车辆管理</span></a></li>
+            <li><a target="navTab" href="../include/cg/ships/list.html"><i class="fa fa-circle-o"></i> <span>船舶管理</span></a></li>
+            <li><a target="navTab" href="../include/cg/drivers/list.html"><i class="fa fa-circle-o"></i><span> 司机管理</span></a></li>
+            <li><a target="navTab" href="../include/cg/companys/list.html"><i class="fa fa-circle-o"></i><span> 企业管理</span></a></li>
+            <li><a target="navTab" href="../include/cg/employees/list.html"><i class="fa fa-circle-o"></i><span> 员工管理</span></a></li>
+            <li><a target="navTab" href="../include/cg/orders/list.html"><i class="fa fa-circle-o"></i> <span>订单管理</span></a></li>
+            <li><a target="navTab" href="../include/cg/routines/list.html"><i class="fa fa-circle-o"></i><span> 路线管理</span></a></li>
+            <li><a target="navTab" href="../include/cg/bills/list.html"><i class="fa fa-circle-o"></i><span> 运单管理</a></li>
+         </ul>
+      </li>
+       
+        <li><a target="navTab" href="../include/cg/emails/list.html"><i class="fa fa-envelope-o"></i> <span>email</span></a></li>
+       <li><a target="navTab" href="../include/cg/treetable/list.html"><i class="fa fa-table"></i> <span>treetable</span></a></li>
+        <li><a target="navTab" href="../include/cg/demos/list.html"><i class="fa fa-circle-o"></i><span> demo</a></li>
+         <li><a target="navTab" href="../include/cg/forms/list.html"><i class="fa fa-circle-o"></i> <span>表单</span></a></li>
+         <li class=" treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>面板</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="../dashboard.html"><i class="fa fa-circle-o"></i> 面板 v1</a></li>
+            <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> 面板 v2</a></li>
+          </ul>
+        </li>
+       <!--  <li class="treeview">
+         <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
+           <span class="pull-right-container">
+             <i class="fa fa-angle-left pull-right"></i>
+           </span>
+         </a>
+         <ul class="treeview-menu">
+           <li><a href="#">Link in level 2</a></li>
+           <li><a href="#">Link in level 2</a></li>
+         </ul>
+       </li> -->
+      </ul>
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </div>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+   <!--  <section class="content-header">
+     <h1>
+       主页
+       <small>页面详情</small>
+     </h1>
+     <ol class="breadcrumb">
+       <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+       <li class="active">Here</li>
+     </ol>
+   </section> -->
+       <div class="content-header-navtabs" style="display: none;">
+              <div class="tabs-page">
+                <ul class="tabs-list clearfix" id="navTabs">
+                <!--    <li class="active"><span>我的主页</span></li> -->
+              <!--      <li class=""><span>我的主页1</span></li> -->
+              <!--<li class=""><span>我的主页2</span></li> -->
+                 </ul>
+                 <a href="javascript:void(0);" class="prev fa fa-step-backward"></a>
+                 <a href="javascript:void(0);" class="next fa fa-step-forward"></a> 
+              </div>
+       </div>
+       <div class="top-notice"></div> 
+
+      <!-- Main content -->
+      <section class="content" id="content">
+      
+      </section> 
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer" style="">
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="radio" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+ <!--  <div class="right-box"> 
+       
+ </div>  -->
+  
+   <!-- Control Sidebar Panel -->
+   <div  id="cs-panel" class="cs-panel control-sidebar1 cs-panel-white" style="display: none;">
+     <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li class="active"><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane active" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript::;">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="pull-right-container">
+                  <span class="label label-danger pull-right">70%</span>
+                </span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="radio" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </div>
+  <!-- /.control-sidebar Panel-->
+
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<div class="modal fade" id="box-new">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">提示</h4>
+      </div>
+      <div class="modal-body">
+         
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">保存</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="smModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span></button>
+        <h4 class="modal-title">提示</h4>
+      </div>
+      <div class="modal-body">
+        <p>确认删除？</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">确认</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="lgModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <p>确认删除？</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">确认</button> -->
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+
+<!-- import-box -->
+<div class="modal fade" id="box-import" data-backdrop="static" data-keyboard="false">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+            数据导入
+        </h4>
+      </div>
+      <div class="modal-body">
+         <div class="row">
+           <div class="col-sm-12">
+              <a href="#" type="button" class="btn btn-info">下载模板</a>
+           </div>
+           <div class="col-sm-12">
+              <a href="#" type="button" class="btn btn-info">选择文件</a>
+           </div>
+           <div class="col-sm-12">
+              <a href="#" type="button" class="btn btn-info">上传</a>
+           </div>
+         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <!-- <button type="button" class="btn btn-primary">确认</button> -->
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<div class="modal fade" id="modalTodo" data-backdrop="static" data-keyboard="false" >
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">
+            退回
+        </h4>
+      </div>
+      <div class="modal-body">
+           
+      </div>
+      <div class="modal-footer">
+        <div class="text-center">
+          <button type="button" class="btn btn-primary">退回</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        </div>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+
+<!-- jQuery 2.2.3 -->
+<!-- <script src="plugins/jQuery/jquery-2.2.3.min.js"></script> -->
+ <!-- AdminLTE App -->
+<script src="../build/js/app.js"></script>
+ <script src="../build/js/cargocn.js"></script>
+<script type="text/javascript">
+  // $('body').slimScroll({
+  //         color: '#00f'
+  // });
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#cargocn").cargocn();
+  autosize(document.querySelectorAll('textarea'));
+ /* $('.icheck-list input[type="radio"]').on('ifChecked', function(event){     
+      $('#reason').val($(this).val());
+  }).iCheck({
+    checkboxClass: 'icheckbox_square-blue',
+    radioClass: 'iradio_square-blue',
+    increaseArea: '20%'
+  });*/
+  
+})
+</script>
+</body>
+</html>
+
+
+             

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-dom-server.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-dom.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.0/react-with-addons.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+</head>
+<body>
+<div id="container"></div>
+ <script type="text/babel">
+
+var  TestClickComponent  = React.createClass({
+     handleClick: function(e){
+        var tipE = ReactDOM.findDOMNode(this.refs.tip);
+        if(tipE.style.display === 'none'){
+            tipE.style.display = 'inline';
+        }else{
+            tipE.style.display = 'none';
+        }
+        e.stopPropagation();
+        e.preventDefault();
+     },
+     render : function(){
+          return (
+               <div>
+                <button onClick={this.handleClick}>显示|隐藏</button>
+                <span ref="tip">测试点击</span>
+               </div>
+          );
+     }	
+});
+
+var TestInputComponet = React.createClass({
+     getInitialState: function(){
+         return {
+            inputContent: ''
+         }
+     },
+     changeHandler: function(event){
+         this.setState({
+             inputContent : event.target.value
+         });
+         event.stopPropagation();
+         event.preventDefault();
+     },
+     render: function(){
+        return (
+             <div>
+                <input type="text" onChange={this.changeHandler} /><span>{this.state.inputContent}</span>
+             </div>
+        )
+     }
+});
+
+var HelloWorld = React.createClass({
+    getInitialState: function(){
+        return {
+            opacity: 1.0,
+            fontSize: '12px'
+        }
+    },
+    render: function(){
+       return  (
+           <div style={this.state}>Hello {this.props.name}</div>
+       );
+    },
+    componentWillMount: function(){
+        //alert('will');
+    },
+    componentDidMount: function(){
+       //alert('did');
+       //var _self = this;
+       window.setTimeout(function(){
+           this.setState({
+                opacity: 0.5,
+                fontSize: '44px'
+           });
+       }.bind(this),1000);
+    }
+});
+ReactDOM.render(
+  <div>
+    <h1>Hello, world!</h1>
+    <TestClickComponent/>
+    <TestInputComponet/>
+    <HelloWorld name="World"/>
+  </div>,
+  document.getElementById('container')
+ ); 
+</script>
+	
+</body>
+</html>

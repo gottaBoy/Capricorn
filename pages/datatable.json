@@ -1,0 +1,28 @@
+{
+    "draw": 1,
+    "recordsTotal": 57,
+    "recordsFiltered": 57,
+    "data":[{
+	  "id":1,
+	  "carNumber":"沪A1976",
+	  "engineNumber":"AGHJ65648",
+	  "vehicleIdNumber":"3456789031",
+	  "type":"半挂一拖二",
+	  "containerStruct":"平板",
+	  "weight":50,
+	  "operator":"张三",
+	  "phone":"15955438888",
+	  "state": 0
+	},{
+	  "id":2,
+	  "carNumber":"沪A1976",
+	  "engineNumber":"AGHJ65648",
+	  "vehicleIdNumber":"3456789031",
+	  "type":"半挂一拖二",
+	  "containerStruct":"平板",
+	  "weight":50,
+	  "operator":"张三",
+	  "phone":"15955438888",
+	  "state": 0
+	}]
+}

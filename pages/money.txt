@@ -1,0 +1,42 @@
+{
+    "data": [
+        {
+            "id":"1",
+            "pName": "山西鑫利源煤炭运输",
+            "comName1": "货运中国山西分公司",
+            "comName2": "鑫利源",
+            "create_date": "2017/03/24",
+            "begin_date":"2017/03/24",
+            "deadline": "2018/03/24",
+            "extn": "13751369976",
+            "routine":"山西长治-上东日照",
+            "expense":"运费总额：3800<br/>预付金额：0",
+            "drawState":"未开票",
+            "tCState":"未开票",
+            "kehuName":"山西鑫利源",
+            "shoukuan":"100",
+            "fukuan":"100",
+            "shuidian":"9%",
+            "caozuo":"<a type='button' class='btn btn-default' target='box-new' href='../include/cargocn1703/money/add.html'> 新增</a>"
+        },
+        {
+            "id":"2",
+            "pName": "山西鑫利源煤炭运输",
+            "comName1": "货运中国山西分公司",
+            "comName2": "鑫利源",
+            "create_date": "2017/03/24",
+            "begin_date":"2017/03/24",
+            "deadline": "2018/03/24",
+            "extn": "13751369976",
+            "routine":"山西长治-上东日照",
+            "expense":"运费总额：3800<br/>预付金额：0",
+            "drawState":"未开票",
+            "tCState":"未开票",
+            "kehuName":"山西鑫利源",
+            "shoukuan":"100",
+            "fukuan":"100",
+            "shuidian":"9%",
+            "caozuo":"<a type='button' class='btn btn-default' target='box-new' href='../include/cargocn1703/money/add.html'> 新增</a>"
+        }
+    ]
+}
