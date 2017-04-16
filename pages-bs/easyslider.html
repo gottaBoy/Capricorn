@@ -13,30 +13,34 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="../dist/css/capricorn.css" rel="stylesheet">
+    <link href="../dist/css/easyslider.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
 
 <body>
 
     <div id="wrapper"> 
       <ul> 
-          <li><a href="cargocn1703.html"><i class="fa fa-search"></i>货运中国1703</a></li>
-          <li><a href="cargocn.html"><i class="fa fa-search"></i>货运中国</a></li>
-          <li><a href="admin2.html"><i class="fa fa-search"></i>sb-admin2</a></li>
-          <li><a href="../starter.html"><i class="fa fa-search"></i>starter</a></li>
-          <li><a href="../index2.html"><i class="fa fa-search"></i>roncoo-adminLTE</a></li>
-          <li><a href="pages-bs/images.html"><i class="fa fa-search"></i>images</a></li>
-          <li><a href="pages-bs/grid.html"><i class="fa fa-search"></i>grid</a></li>
-          <li><a href="pages-bs/forms.html"><i class="fa fa-search"></i>forms</a></li>
-          <li><a href="pages-bs/buttons.html"><i class="fa fa-search"></i>buttons</a></li>
-          <li><a href="pages-bs/easyslider.html"><i class="fa fa-search"></i>easyslider</a></li>
+        <li><a href="index.html"><i class="fa fa-search"></i>主页</a></li>
       </ul>
+    </div>
+    <div class="container">
+      <div id="slider"> 
+        <ul>  
+          <li><img src="../dist/img/avatar.png" alt="" /></li>
+          <li><img src="../dist/img/avatar2.png" alt="" /></li>
+          <li><img src="../dist/img/avatar3.png" alt="" /></li>
+          <li><img src="../dist/img/avatar04.png" alt="" /></li>
+          <li><img src="../dist/img/avatar5.png" alt="" /></li>
+        </ul>
+        <!-- <span id="prevBtn"><a href="javascript:void(0);">previous</a></span>
+        <span id="nextBtn"><a href="javascript:void(0);">Next</a></span> -->
+      </div>
     </div>
     <!-- /#wrapper -->
 
@@ -45,14 +49,23 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
-
+    <!-- <script src="../build/js/plugins/easySlider.js"></script> -->
+    <script src="../build/js/plugins/easySlider.js"></script>
     <!-- Metis Menu Plugin JavaScript -->
     <!-- <script src="../vendor/metisMenu/metisMenu.min.js"></script>
     <script src="../vendor/raphael/raphael.min.js"></script>
     <script src="../vendor/morrisjs/morris.min.js"></script>
     <script src="../data/morris-data.js"></script>
     <script src="../dist/js/sb-admin-2.js"></script> -->
-
+    <script type="text/javascript">
+     $(document).ready(function(){
+        $("#slider").easySlider({
+          auto: true,
+          continuous: true,
+          controlsShow: true
+        });
+     })
+    </script>
 </body>
 
 </html>

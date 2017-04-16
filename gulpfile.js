@@ -53,7 +53,7 @@ gulp.task('sass', function() {
 // 编译sass
 // 在命令行输入 gulp sass 启动此任务
 gulp.task('bootstrap-sass', function() {
-    return gulp.src(["build/bootstrap-sass/bootstrap.scss"])
+    return gulp.src(["build/bootstrap-sass/capricorn.scss"])
         .pipe(sass())
         .pipe(header(banner, { pkg: pkg }))
         .pipe(gulp.dest('dist/css/'))
@@ -137,7 +137,9 @@ gulp.task('default', ['minify-css', 'minify-js', 'copy']);
 gulp.task('browserSync', function() {
     browserSync.init({
         server: {
-            baseDir: ''
+            baseDir: './',
+            //baseDir: './pages-bs',
+            index:"pages-bs/index.html"
         },
     })
 })
@@ -145,7 +147,9 @@ gulp.task('browserSync', function() {
 gulp.task('devPage', ['browserSync','bootstrap-sass'], function() {
     // Reloads the browser whenever HTML or JS files change
     //gulp.watch('sass/*.scss', ['sass']);
-    gulp.watch('**/*.html', browserSync.reload);
+    //gulp.watch('**/*.html', browserSync.reload);
+    gulp.watch('build/bootstrap-sass/capricorn.scss', ['bootstrap-sass']);
+    gulp.watch('pages-bs/*.html', browserSync.reload);
 });
 
 // Dev task with browserSync
